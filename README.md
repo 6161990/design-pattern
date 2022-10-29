@@ -1,1 +1,1 @@
-# designe-pattern
+# design-pattern
