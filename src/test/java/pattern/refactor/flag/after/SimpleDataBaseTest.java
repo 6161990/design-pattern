@@ -10,7 +10,7 @@ class SimpleDataBaseTest {
 
     @Test
     void after() throws IOException {
-        SimpleDataBase simpleDataBase = new SimpleDataBase(new FileReader("/Users/6161990src/Documents/GitHub/T-Express/Design Pattern/T/src/test/java/pattern/refactor/flag/test.txt"));
+        SimpleDataBase simpleDataBase = new SimpleDataBase(new FileReader("/Users/6161990src/Documents/GitHub/design-pattern/src/test/java/pattern/refactor/flag/test.txt"));
 
         Iterator<String> ir = simpleDataBase.iterator();
 

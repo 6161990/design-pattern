@@ -1,4 +1,4 @@
-package pattern.refactor.flag.after;
+package pattern.refactor.flag.before;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,11 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
-class SimpleDataBase2Test {
+class SimpleDataBaseTest {
 
     @Test
-    void after() throws IOException {
-        SimpleDataBase2 simpleDataBase = new SimpleDataBase2(new FileReader("/Users/6161990src/Documents/GitHub/T-Express/Design Pattern/T/src/test/java/pattern/refactor/flag/test.txt"));
+    void before() throws IOException {
+        SimpleDataBase simpleDataBase = new SimpleDataBase(new FileReader("/Users/6161990src/Documents/GitHub/design-pattern/src/test/java/pattern/refactor/flag/test.txt"));
 
         Iterator<String> ir = simpleDataBase.iterator();
 
