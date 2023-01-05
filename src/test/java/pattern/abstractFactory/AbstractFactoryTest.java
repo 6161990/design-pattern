@@ -51,7 +51,7 @@ class AbstractFactoryTest {
         String productOutput = daoFactory.createProduct().insertProduct(examProduct);
         String userInfoOutput = daoFactory.createUserInfo().insertUserInfo(examUserInfo);
 
-        Assertions.assertEquals(userInfoOutput ,"insert into MYSQL DB userId =" + examUserInfo.getUserId());
+        Assertions.assertEquals(userInfoOutput ,"insert into MYSQL DB userId =" + examUserInfo.userId());
         Assertions.assertEquals(productOutput , "insert into MYSQL DB productId =" + examProduct.productId());
     }
 

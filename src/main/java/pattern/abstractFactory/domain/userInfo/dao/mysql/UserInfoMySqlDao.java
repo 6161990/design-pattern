@@ -6,16 +6,16 @@ import pattern.abstractFactory.domain.userInfo.dao.UserInfoDao;
 public class UserInfoMySqlDao implements UserInfoDao {
     @Override
     public String insertUserInfo(UserInfo userInfo) {
-        return "insert into MYSQL DB userId =" + userInfo.getUserId();
+        return "insert into MYSQL DB userId =" + userInfo.userId();
     }
 
     @Override
     public String updateUserInfo(UserInfo userInfo) {
-        return "update into MYSQL DB userId =" + userInfo.getUserId();
+        return "update into MYSQL DB userId =" + userInfo.userId();
     }
 
     @Override
     public String deleteUserInfo(UserInfo userInfo) {
-        return "delete into MYSQL DB userId =" + userInfo.getUserId();
+        return "delete into MYSQL DB userId =" + userInfo.userId();
     }
 }
