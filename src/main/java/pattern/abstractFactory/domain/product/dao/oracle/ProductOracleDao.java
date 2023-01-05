@@ -7,16 +7,16 @@ public class ProductOracleDao implements ProductDao {
 
     @Override
     public String insertProduct(Product product) {
-        return "insert into Oracle DB productId =" + product.getProductId();
+        return "insert into Oracle DB productId =" + product.productId();
     }
 
     @Override
     public String updateProduct(Product product) {
-        return "update into Oracle DB productId =" + product.getProductId();
+        return "update into Oracle DB productId =" + product.productId();
     }
 
     @Override
     public String deleteProduct(Product product) {
-        return "delete into Oracle DB productId =" + product.getProductId();
+        return "delete into Oracle DB productId =" + product.productId();
     }
 }
