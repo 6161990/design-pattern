@@ -2,6 +2,7 @@ package pattern.builder.payloadVersion;
 
 import java.time.LocalDateTime;
 
+/** adapter pattern 에서 target 클래스 */
 public interface Paid {
     MerchantItems[] getMerchantItems();
 

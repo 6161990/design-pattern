@@ -6,6 +6,7 @@ import pattern.builder.payloadVersion.PaymentMethod;
 
 import java.time.LocalDateTime;
 
+/** adapter */
 public class FirstPaid implements Paid {
 
     private PaidPayloadVersion1 paidPayloadVersion1;
