@@ -1,6 +1,6 @@
 package pattern.adapter.forObjectOriented;
 
-/**합성 이용*/
+/** 합성 이용*/
 /** Adapter : Target 인터페이스에 Adaptee 의 인터페이스를 맞춰주는 클래스 */
 public class PrintBanner implements Print {
 

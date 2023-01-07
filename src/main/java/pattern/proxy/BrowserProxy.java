@@ -3,7 +3,7 @@ package pattern.proxy;
 public class BrowserProxy implements IBrowser {
 
     private String url;
-    private Html html;
+    private Browser browser;
 
     public BrowserProxy(String url) {
         this.url = url;
@@ -11,11 +11,11 @@ public class BrowserProxy implements IBrowser {
 
     @Override
     public Html show() {
-        if (html == null) {
-            this.html = new Html(url);
+        if (browser == null) {
+            this.browser = new Browser(url);
             System.out.println("BrowserProxy loading html from : " + url);
         }
         System.out.println("BrowserProxy use cache : " + url);
-        return html;
+        return browser.show();
     }
 }
