@@ -64,6 +64,8 @@ public class BridgeTest {
         linkedQueue.enQueue("AAA");
         linkedQueue.enQueue("BBB");
         linkedQueue.enQueue("CCC");
+        linkedQueue.add("RRR");
+        linkedQueue.remove(2);
 
         String first = linkedQueue.deQueue();
         String second = linkedQueue.deQueue();
