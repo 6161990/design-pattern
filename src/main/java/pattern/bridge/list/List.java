@@ -2,13 +2,14 @@ package pattern.bridge.list;
 
 import pattern.bridge.impl.AbstractList;
 
-// Abstraction : 추상화 개념의 상위 클래스이고 객체 구현자(Implemntor)에 대한 참조자를 관리
+// Abstraction : 추상화 개념의 상위 클래스 이고 객체 구현자(Implemntor) 에 대한 참조자를 관리
 public abstract class List<T> {
 
     AbstractList<T> impl;
 
-    public List(AbstractList<T> list) {
-        this.impl = list;
+    public List(AbstractList<T> impl) {
+        System.out.println("abstract list");
+        this.impl = impl;
     }
 
     public void add(T obj){

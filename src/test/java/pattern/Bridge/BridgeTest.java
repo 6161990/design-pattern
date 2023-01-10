@@ -1,8 +1,7 @@
 package pattern.Bridge;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import pattern.bridge.impl.ArrayImpl;
+import pattern.bridge.impl.ArrayListImpl;
 import pattern.bridge.impl.LinkedListImpl;
 import pattern.bridge.list.Queue;
 import pattern.bridge.list.Stack;
@@ -29,7 +28,7 @@ public class BridgeTest {
 
     @Test
     void Bridge패턴을_이용해_Array로_Stack을_구현합니다() {
-        Stack<String> arrayStack = new Stack<>(new ArrayImpl<>());
+        Stack<String> arrayStack = new Stack<>(new ArrayListImpl<>());
         arrayStack.push("AAA");
         arrayStack.push("BBB");
         arrayStack.push("CCC");
@@ -45,7 +44,7 @@ public class BridgeTest {
 
     @Test
     void Bridge패턴을_이용해_Array로_Queue를_구현합니다() {
-        Queue<String> arrayQueue = new Queue<>(new ArrayImpl<>());
+        Queue<String> arrayQueue = new Queue<>(new ArrayListImpl<>());
         arrayQueue.enQueue("AAA");
         arrayQueue.enQueue("BBB");
         arrayQueue.enQueue("CCC");
