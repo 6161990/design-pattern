@@ -2,7 +2,7 @@ package pattern.bridge.impl;
 
 import java.util.LinkedList;
 
-// ConcreteImplementor : Implementor 에 선언된 기능을 실제로 구현한다. 여러 구현 방싯ㄱ의 클래스가 만들어 질 수 잇다.
+// ConcreteImplementor : Implementor 에 선언된 기능을 실제로 구현한다. 여러 구현 방식의 클래스가 만들어 질 수 잇다.
 public class LinkedListImpl<T> implements AbstractList<T> {
 
     LinkedList<T> linkedList;
