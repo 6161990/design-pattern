@@ -2,10 +2,10 @@ package pattern.specification.smssender.condition;
 
 import lombok.AllArgsConstructor;
 import pattern.specification.Specification;
-import pattern.specification.smssender.factor.SmsTriggingFactor;
+import pattern.specification.smssender.factor.NotificationFactor;
 
 @AllArgsConstructor
-public class PayFailedCondition implements Specification<SmsTriggingFactor> {
+public class PayFailedCondition implements Specification<NotificationFactor> {
 
     int nth;
 
@@ -14,7 +14,7 @@ public class PayFailedCondition implements Specification<SmsTriggingFactor> {
     }
 
     @Override
-    public boolean isSatisfy(SmsTriggingFactor factor) {
+    public boolean isSatisfy(NotificationFactor factor) {
         return nth == factor.getFailedNth();
     }
 }

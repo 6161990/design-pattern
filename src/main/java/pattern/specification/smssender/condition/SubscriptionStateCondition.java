@@ -2,11 +2,11 @@ package pattern.specification.smssender.condition;
 
 import lombok.AllArgsConstructor;
 import pattern.specification.Specification;
-import pattern.specification.smssender.factor.SmsTriggingFactor;
+import pattern.specification.smssender.factor.NotificationFactor;
 import pattern.specification.smssender.factor.SubscriptionState;
 
 @AllArgsConstructor
-public class SubscriptionStateCondition implements Specification<SmsTriggingFactor> {
+public class SubscriptionStateCondition implements Specification<NotificationFactor> {
 
     SubscriptionState expected;
 
@@ -15,7 +15,7 @@ public class SubscriptionStateCondition implements Specification<SmsTriggingFact
     }
 
     @Override
-    public boolean isSatisfy(SmsTriggingFactor factor) {
+    public boolean isSatisfy(NotificationFactor factor) {
         return expected.equals(factor.getSubscriptionState());
     }
 }

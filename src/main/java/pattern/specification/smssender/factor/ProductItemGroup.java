@@ -1,6 +1,7 @@
 package pattern.specification.smssender.factor;
 
 public class ProductItemGroup {
+    // monthly, package, period, etc
 
     String itemGroup;
 

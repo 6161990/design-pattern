@@ -3,10 +3,10 @@ package pattern.specification.smssender.condition;
 import lombok.AllArgsConstructor;
 import pattern.specification.Specification;
 import pattern.specification.smssender.factor.ProductItemGroup;
-import pattern.specification.smssender.factor.SmsTriggingFactor;
+import pattern.specification.smssender.factor.NotificationFactor;
 
 @AllArgsConstructor
-public class ProductItemGroupCondition implements Specification<SmsTriggingFactor> {
+public class ProductItemGroupCondition implements Specification<NotificationFactor> {
 
     ProductItemGroup expected;
 
@@ -15,7 +15,7 @@ public class ProductItemGroupCondition implements Specification<SmsTriggingFacto
     }
 
     @Override
-    public boolean isSatisfy(SmsTriggingFactor factor) {
+    public boolean isSatisfy(NotificationFactor factor) {
         return expected.equals(factor.getProductItemGroup());
     }
 
