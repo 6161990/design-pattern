@@ -15,11 +15,11 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class SmsPolicyFinder {
+public class SmsFinder {
 
     private final SmsFactory smsFactory;
 
-    public Optional<Sms> getSms(NotificationFactor factor, String... variables) {
+    public Optional<Sms> findWithPolicy(NotificationFactor factor, String... variables) {
         List<SmsPolicy> smsPolicies = getSmsPolicies();
 
         for (SmsPolicy policy : smsPolicies) {

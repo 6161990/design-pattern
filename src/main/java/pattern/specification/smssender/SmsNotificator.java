@@ -10,18 +10,20 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class SubscriptionNotificator {
+public class SmsNotificator implements Notifier {
 
     private final FactorGenerator factorGenerator;
+    private final SmsFinder smsFinder;
     private final SmsSender smsSender;
-    private final SmsPolicyFinder smsPolicyFinder;
 
-    public void send(String userId, Subscription subscription, String... variables) {
+    @Override
+    public void notifier(Subscription subscription, String... variables) {
         NotificationFactor factor = factorGenerator.generate("SMS", subscription);
-        Optional<Sms> sms = smsPolicyFinder.getSms(factor, variables);
+        Optional<Sms> sms = smsFinder.findWithPolicy(factor, variables);
 
         if(sms.isEmpty()) throw new NoSuchElementException();
 
         smsSender.send(sms.get());
     }
+
 }
